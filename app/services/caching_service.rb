@@ -11,7 +11,9 @@ class CachingService
                        password: REDIS_PASSWORD,
                        read_timeout: REDIS_TIMEOUT,
                        write_timeout: REDIS_TIMEOUT,
-                       connect_timeout: REDIS_TIMEOUT)
+                       connect_timeout: REDIS_TIMEOUT,
+                       ssl: true,
+                       ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
   end
 
   def right_push(key, data)
