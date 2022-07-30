@@ -10,7 +10,7 @@ module Fetch
       result, error = RubyReadabilityService.call(url)
       return if error
 
-      raw_data = collect(result)
+      raw_data = collect(result.content)
       total = raw_data[:title_and_links].size || 0
       return if total.zero?
 
@@ -47,7 +47,7 @@ module Fetch
         article[:comment] = raw_data[:comments][i].try(:text)
         articles << article
       end
-      CachePageWorker.perform_async(cache_key, articles.to_json)
+      FetchShortDescWorker.perform_async(cache_key, articles.to_json)
       articles.as_json
     end
 

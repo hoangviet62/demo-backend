@@ -6,6 +6,7 @@ production:
   - [default, 1]
   - [crawl_page_worker, 1]
   - [cache_page_worker, 1]
+  - [fetch_short_desc_worker, 1]
 :daemon: false
 :dynamic: true
 :dynamic_every: 5

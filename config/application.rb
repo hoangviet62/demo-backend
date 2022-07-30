@@ -10,6 +10,11 @@ Bundler.require(*Rails.groups)
 
 module DemoBackend
   class Application < Rails::Application
+    initializer(:remove_action_mailbox_and_activestorage_routes, after: :add_routing_paths) do |app|
+      app.routes_reloader.paths.delete_if { |path| path =~ /activestorage/ }
+      app.routes_reloader.paths.delete_if { |path| path =~ /actionmailbox/ }
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 

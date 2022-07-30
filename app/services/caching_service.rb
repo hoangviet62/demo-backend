@@ -21,7 +21,7 @@ class CachingService
   end
 
   def set_data(key, data)
-    redis.set(key, data)
+    redis.set(key, data, ex: CACHE_EXPIRED_TIME)
   end
 
   def get_data(key)
@@ -30,5 +30,9 @@ class CachingService
 
   def del(key)
     redis.del(key)
+  end
+
+  def get_all_keys
+    redis.keys "*"
   end
 end
