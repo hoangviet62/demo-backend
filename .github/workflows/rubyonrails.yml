@@ -23,7 +23,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Run tests
-        run: bundle exec rubocop rspec
+        run: bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
@@ -35,6 +35,6 @@ jobs:
         with:
           bundler-cache: true
       - name: Security audit application code
-        run: bin/brakeman -q -w2
+        run: bundle exec brakeman -q -w2
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
