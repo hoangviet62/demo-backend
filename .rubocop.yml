@@ -16,6 +16,7 @@ Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space
 
 Metrics/CyclomaticComplexity:
+  Max: 10
   Exclude:
     - bin/*
 
@@ -24,6 +25,8 @@ Metrics/PerceivedComplexity:
     - bin/*
 
 Layout/LineLength:
+  Max: 150
   Exclude:
     - bin/*
+
 

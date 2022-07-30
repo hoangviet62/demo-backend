@@ -32,7 +32,7 @@ class CachingService
     redis.del(key)
   end
 
-  def get_all_keys
+  def all_keys
     redis.keys "*"
   end
 end
