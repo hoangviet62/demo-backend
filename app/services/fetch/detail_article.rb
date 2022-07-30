@@ -10,8 +10,8 @@ module Fetch
     end
 
     def call
-      result = RubyReadabilityService.call(url)
-      return if result.nil?
+      result, error = RubyReadabilityService.call(url)
+      return { error: error } if error
 
       raw_data = collect(result)
       raw_data.each { |(k, v)| raw_data[k] = format_data(k, v) }

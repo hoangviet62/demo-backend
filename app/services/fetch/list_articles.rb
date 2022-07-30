@@ -7,8 +7,8 @@ module Fetch
     end
 
     def call
-      result = RubyReadabilityService.call(url)
-      return if result.nil?
+      result, error = RubyReadabilityService.call(url)
+      return if error
 
       raw_data = collect(result)
       total = raw_data[:title_and_links].size || 0

@@ -7,7 +7,7 @@ class CachePageWorker
   def perform(key, params)
     params = JSON.parse params, symbolize_names: true
     params.each do |article|
-      ::Fetch::DetailArticle.new(id: article[:id], url: article[:url]).call.each do |(k, v)|
+      ::Fetch::DetailArticle.new(id: article[:id], url: article[:url]).call&.each do |(k, v)|
         article[k] = v
       end
     end

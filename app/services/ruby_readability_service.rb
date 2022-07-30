@@ -9,14 +9,14 @@ class RubyReadabilityService
     def call(url)
       Rails.logger.info "Fetching data from #{url}"
       source = Down.open(url, max_redirects: 1, timeout: 5).read
-      Readability::Document.new(
+      [Readability::Document.new(
         source,
         tags: TAGS,
         attributes: ATTRIBUTES
-      ).content
-    rescue StandardError
-      Rails.logger.error "Failed to fetch the content"
-      nil
+      ).content, nil]
+    rescue StandardError => e
+      Rails.logger.error "Failed to fetch the content from #{url}"
+      [nil, e.message]
     end
   end
 end
