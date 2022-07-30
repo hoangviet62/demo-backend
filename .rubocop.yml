@@ -1,0 +1,28 @@
+Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: false
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/MethodLength:
+  Max: 50
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - bin/*
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - bin/*
+
+Layout/LineLength:
+  Exclude:
+    - bin/*

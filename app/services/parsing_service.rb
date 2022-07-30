@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ParsingService
   attr_reader :data, :search_terms
 
@@ -13,7 +15,7 @@ class ParsingService
       result[k] = doc.xpath(v)
     end
     result
-  rescue
+  rescue StandardError
     Rails.logger.error "Failed to parse the content"
     {}
   end

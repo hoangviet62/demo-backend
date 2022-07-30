@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Fetch
   class Articles
     def initialize(page: 1)
@@ -8,13 +10,33 @@ module Fetch
       result = RubyReadabilityService.call(url)
       return if result.nil?
 
-      raw_data = collect_data(result)
-      total = raw_data[:title_and_links]&.size || 0
+      raw_data = collect(result)
+      total = raw_data[:title_and_links].size || 0
       return if total.zero?
 
+      building(raw_data, total)
+    end
+
+    private
+
+    attr_reader :page
+
+    def collect(result)
+      search_terms = {
+        title_and_links: "//td[@class='title']/a[@class='titlelink']",
+        scores: "//span[@class='score']",
+        users: "//a[@class='hnuser']",
+        ages: "//span[@class='age']",
+        comments: "//a[starts-with(@href,'item?id=')]/text()[contains(., 'comments')]"
+      }
+
+      ParsingService.new(data: result, search_terms: search_terms).call
+    end
+
+    def building(raw_data, total)
       articles = []
       (0..total - 1).each do |i|
-        article = {title: "", url: "", score: "", user: "", age: "", comment: "", short_description: ""}
+        article = { title: "", url: "", score: "", user: "", age: "", comment: "", short_description: "" }
         article[:title] = raw_data[:title_and_links][i].try(:children).try(:text)
         article[:url] = raw_data[:title_and_links][i].try(:attribute, "href").try(:value)
         article[:score] = raw_data[:scores][i].try(:children).try(:text)
@@ -25,22 +47,6 @@ module Fetch
       end
 
       articles.as_json
-    end
-
-    private
-
-    attr_reader :page
-
-    def collect_data(result)
-      search_terms = {
-        title_and_links: "//td[@class='title']/a[@class='titlelink']",
-        scores: "//span[@class='score']",
-        users: "//a[@class='hnuser']",
-        ages: "//span[@class='age']",
-        comments: "//a[starts-with(@href,'item?id=')]/text()[contains(., 'comments')]"
-      }
-
-      ParsingService.new(data: result, search_terms: search_terms).call
     end
 
     def url
