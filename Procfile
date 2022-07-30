@@ -1,2 +1,2 @@
 web: bundle exec rails s -p $PORT
-worker: bundle exec sidekiq
+worker: bundle exec sidekiq -c 5
