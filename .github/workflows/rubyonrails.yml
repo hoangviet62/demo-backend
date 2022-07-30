@@ -21,7 +21,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
-          bundler-cache: true
+          bundler-cache: false
       - name: Bundler
         run: bundle install
       - name: Run tests
@@ -35,7 +35,7 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
-          bundler-cache: true
+          bundler-cache: false
       - name: Bundler
         run: bundle install
       - name: Security audit application code
