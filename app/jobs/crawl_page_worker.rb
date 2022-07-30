@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CrawlPageWorker
   include Sidekiq::Worker
   sidekiq_options queue: :crawl_page_worker, retry: 0

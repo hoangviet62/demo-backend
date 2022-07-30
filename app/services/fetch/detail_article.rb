@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Fetch
   class DetailArticle
     attr_reader :id, :url
