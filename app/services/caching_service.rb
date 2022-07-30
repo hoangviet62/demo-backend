@@ -16,7 +16,7 @@ class CachingService
     redis.rpush(key, data.to_json)
   end
 
-  def set(key, data)
+  def set_data(key, data)
     redis.set(key, data)
   end
 
