@@ -1,0 +1,12 @@
+---
+:concurrency: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+production:
+  :concurrency: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+:queues:
+  - [default, 1]
+  - [crawl_page_worker, 1]
+  - [cache_page_worker, 1]
+:daemon: false
+:dynamic: true
+:dynamic_every: 5
+:enabled: true

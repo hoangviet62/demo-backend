@@ -2,6 +2,8 @@
 
 class ArticlesController < ApplicationController
   def index
-    render json: { data: ::Fetch::Articles.new.call }
+    render json: { data: ::Fetch::ListArticles.new.call }
   end
+
+  def show; end
 end
