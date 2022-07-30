@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-REDIS_TIMEOUT = ENV.fetch("REDIS_TIMEOUT", 2)
+REDIS_TIMEOUT = ENV.fetch("REDIS_TIMEOUT", 5)
 REDIS_HOST = ENV.fetch("REDIS_HOST", "redis-11921.c17.us-east-1-4.ec2.cloud.redislabs.com")
 REDIS_PORT = ENV.fetch("REDIS_PORT", 11_921)
 REDIS_USER = ENV.fetch("REDIS_USER", "default")

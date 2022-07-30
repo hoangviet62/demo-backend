@@ -2,7 +2,7 @@
 
 class CachePageWorker
   include Sidekiq::Worker
-  sidekiq_options queue: :cache_page_worker, retry: 0
+  sidekiq_options queue: :cache_page_worker, retry: 3
 
   def perform(key, params)
     params = JSON.parse params, symbolize_names: true
