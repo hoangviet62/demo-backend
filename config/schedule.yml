@@ -1,5 +1,4 @@
 scheduler_job:
   name: "SchedulerWorker - every 5 seconds"
-  cron: "*/60 * * * * *"
-  class: "SchedulerWorker"
-  queue: default
+  cron: "*/1 * * * *"
+  class: 'SchedulerWorker'

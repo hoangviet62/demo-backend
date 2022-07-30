@@ -17,5 +17,5 @@ Sidekiq.configure_client do |config|
   config.redis = { host: REDIS_HOST, password: REDIS_PASSWORD, user: REDIS_USER, port: REDIS_PORT, database: REDIS_DB }
 end
 
-# Sidekiq::Cron::Job.create(name: "SchedulerWorker - every 5 seconds", cron: "*/5 * * * * *", class: "SchedulerWorker")
+Sidekiq::RetrySet.new.clear
 Sidekiq::Cron::Job.destroy_all!
