@@ -4,12 +4,14 @@ class CachingService
   attr_reader :redis
 
   def initialize
-    @redis = Redis.new(timeout: REDIS_TIMEOUT,
-                       host: REDIS_HOST,
+    @redis = Redis.new(host: REDIS_HOST,
                        port: REDIS_PORT,
                        db: REDIS_DB,
                        user: REDIS_USER,
-                       password: REDIS_PASSWORD)
+                       password: REDIS_PASSWORD,
+                       read_timeout: REDIS_TIMEOUT,
+                       write_timeout: REDIS_TIMEOUT,
+                       connect_timeout: REDIS_TIMEOUT)
   end
 
   def right_push(key, data)
