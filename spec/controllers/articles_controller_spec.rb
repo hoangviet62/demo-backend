@@ -6,14 +6,14 @@ RSpec.describe ArticlesController, type: :controller do
   describe "INDEX #articles" do
     let(:page) { 10 }
     it "return list articles from api" do
-      CachingService.new.del("overview_#{page}")
+      allow(CachingService).to receive(:new).and_raise("boom")
       get :index, params: { page: page }
       expect(response).to be_successful
       expect(JSON.parse(response.body)["source_from"]).to eq("api")
     end
 
     it "return list articles from cached" do
-      CachingService.new.set_data("overview_#{page}", "1234")
+      allow(CachingService.new).to receive(:get_data).and_return("{}".to_json)
       get :index, params: { page: page }
       expect(response).to be_successful
       expect(JSON.parse(response.body)["source_from"]).to eq("cached")
@@ -24,10 +24,11 @@ RSpec.describe ArticlesController, type: :controller do
     let(:id) { 10 }
     let(:url) { "https://google.com" }
     it "return detail article from api" do
-      CachingService.new.del(id)
+      allow(JSON).to receive(:parse).and_raise("boom")
+      allow(CachingService.new).to receive(:set_data).and_return("{}".to_json)
       get :show, params: { id: id, url: url }
       expect(response).to be_successful
-      expect(JSON.parse(response.body)["source_from"]).to eq("api")
+      expect(response.body).to match(/"source_from":"api"/)
     end
 
     it "return detail article from cached" do

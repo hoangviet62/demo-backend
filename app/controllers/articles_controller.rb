@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
     data = begin
       JSON.parse CachingService.new.get_data(cache_key)
-    rescue StandardError
+    rescue StandardError => e
       source_from = "api"
       ::Fetch::ListArticles.new(page: current_page).call
     end
@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
 
     data = begin
       JSON.parse CachingService.new.get_data(id)
-    rescue StandardError
+    rescue StandardError => e
       source_from = "api"
       ::Fetch::DetailArticle.new(id: id, url: url).call
     end

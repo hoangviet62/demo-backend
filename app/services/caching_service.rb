@@ -17,7 +17,7 @@ class CachingService
   end
 
   def set_data(key, data)
-    redis.set(key, data, ex: CACHE_EXPIRED_TIME)
+    redis.set(key, data)
   end
 
   def get_data(key)

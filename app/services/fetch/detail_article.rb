@@ -38,6 +38,8 @@ module Fetch
       detail_data[:content] = detail_data[:content].map(&:to_html)
       CachingService.new.set_data(id, detail_data.to_json)
       detail_data
+    rescue StandardError
+      { content: [], images: [] }
     end
   end
 end
