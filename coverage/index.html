@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-31T15:24:59+07:00">2022-07-31T15:24:59+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-31T20:04:28+07:00">2022-07-31T20:04:28+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  94.12%
+  94.24%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.58
+         2.54
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>187</b> relevant lines,
-    <span class="green"><b>176</b> lines covered</span> and
+    <b>191</b> relevant lines,
+    <span class="green"><b>180</b> lines covered</span> and
     <span class="red"><b>11</b> lines missed. </span>
     (<span class="green">
-  94.12%
+  94.24%
 </span>
 )
   </div>
@@ -172,11 +172,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2f5c118ec78f969ee7dfd84f327880b21cc31e50" class="src_link" title="config/application.rb">config/application.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">41</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
+            <td class="cell--number">1.36</td>
             
           </tr>
         
@@ -3460,8 +3460,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3660,13 +3660,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # Initialize configuration defaults for originally generated Rails version.</code>
+            
+
+            <code class="ruby">    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do</code>
           </li>
         </div>
       
@@ -3677,29 +3677,29 @@
 
             
 
-            <code class="ruby">    config.load_defaults 7.0</code>
+            <code class="ruby">      allow do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        origins &quot;*&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # Configuration for the application, engines, and railties goes here.</code>
+            
+
+            <code class="ruby">        resource &quot;*&quot;, headers: :any, methods: %i[get post options]</code>
           </li>
         </div>
       
@@ -3710,7 +3710,7 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -3721,7 +3721,7 @@
 
             
 
-            <code class="ruby">    # These settings can be overridden in specific environments using the files</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -3732,7 +3732,7 @@
 
             
 
-            <code class="ruby">    # in config/environments, which are processed later.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3743,18 +3743,18 @@
 
             
 
-            <code class="ruby">    #</code>
+            <code class="ruby">    # Initialize configuration defaults for originally generated Rails version.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # config.time_zone = &quot;Central Time (US &amp; Canada)&quot;</code>
+            
+
+            <code class="ruby">    config.load_defaults 7.0</code>
           </li>
         </div>
       
@@ -3765,7 +3765,7 @@
 
             
 
-            <code class="ruby">    # config.eager_load_paths &lt;&lt; Rails.root.join(&quot;extras&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3776,7 +3776,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Configuration for the application, engines, and railties goes here.</code>
           </li>
         </div>
       
@@ -3787,7 +3787,7 @@
 
             
 
-            <code class="ruby">    # Only loads a smaller set of middleware suitable for API only apps.</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -3798,7 +3798,7 @@
 
             
 
-            <code class="ruby">    # Middleware like session, flash, cookies can be added back manually.</code>
+            <code class="ruby">    # These settings can be overridden in specific environments using the files</code>
           </li>
         </div>
       
@@ -3809,18 +3809,18 @@
 
             
 
-            <code class="ruby">    # Skip views, helpers and assets when generating a new resource.</code>
+            <code class="ruby">    # in config/environments, which are processed later.</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">    config.api_only = true</code>
+            <code class="ruby">    #</code>
           </li>
         </div>
       
@@ -3831,12 +3831,89 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    # config.time_zone = &quot;Central Time (US &amp; Canada)&quot;</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">    # config.eager_load_paths &lt;&lt; Rails.root.join(&quot;extras&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">    # Only loads a smaller set of middleware suitable for API only apps.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">    # Middleware like session, flash, cookies can be added back manually.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">    # Skip views, helpers and assets when generating a new resource.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    config.api_only = true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
