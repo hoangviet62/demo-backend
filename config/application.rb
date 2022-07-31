@@ -15,6 +15,13 @@ module DemoBackend
       app.routes_reloader.paths.delete_if { |path| path =~ /actionmailbox/ }
     end
 
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+      allow do
+        origins "*"
+        resource "*", headers: :any, methods: %i[get post options]
+      end
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
