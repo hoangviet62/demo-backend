@@ -4,8 +4,8 @@ module Fetch
   class DetailArticle
     attr_reader :id, :url, :short_desc_only
 
-    def initialize(id: 32_267_222,
-                   url: "https://news.ycombinator.com:443/item?id=32267222",
+    def initialize(id: 32_245_146,
+                   url: "https://www.axios.com/2022/07/25/sunset-social-network-facebook-tiktok",
                    short_desc_only: false)
       @id = id
       @url = url
@@ -24,18 +24,18 @@ module Fetch
 
     def collect(result)
       doc = Nokogiri::HTML5(result.prepare_candidates[:elem])
-      doc.xpath("//div/img", "//text()")
+      { content: doc.xpath("//text()"), images: result.images }
     end
 
     def short_desc_handler(detail_data)
       CachePageWorker.perform_async(id, url)
-      { short_description: detail_data&.take(20)&.select do |r|
+      { short_description: detail_data[:content]&.take(20)&.select do |r|
         r.text.strip unless r.text.strip.empty?
-      end&.map(&:text)&.join("") }
+      end&.map(&:text)&.join(""), images: detail_data[:images] }
     end
 
     def full_content_cache(detail_data)
-      detail_data = detail_data.map(&:to_html)
+      detail_data[:content] = detail_data[:content].map(&:to_html)
       CachingService.new.set_data(id, detail_data.to_json)
       detail_data
     end

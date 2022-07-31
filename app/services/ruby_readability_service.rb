@@ -3,7 +3,7 @@
 class RubyReadabilityService
   class << self
     TAGS = %w[body p div pre code img h1 h2 h3 h4 li ul tt em b a ol blockquote center br table td tr tbody font i dl dt dd
-              span header].freeze
+              span header figure main].freeze
     ATTRIBUTES = %w[href rowspan border color src bgcolor width size align face class title id].freeze
 
     def call(url)

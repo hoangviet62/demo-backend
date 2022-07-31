@@ -33,6 +33,6 @@ class CachingService
   end
 
   def all_keys
-    redis.keys "*"
+    redis.keys
   end
 end

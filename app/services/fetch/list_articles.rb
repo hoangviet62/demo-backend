@@ -45,6 +45,9 @@ module Fetch
         article[:user] = raw_data[:users][i].try(:children).try(:text)
         article[:age] = raw_data[:ages][i].try(:attribute, "title").try(:value)
         article[:comment] = raw_data[:comments][i].try(:text)
+        ::Fetch::DetailArticle.new(id: article[:id], url: article[:url], short_desc_only: true).call&.each do |(k, v)|
+          article[k] = v
+        end
         articles << article
       end
       FetchShortDescWorker.perform_async(cache_key, articles.to_json)
