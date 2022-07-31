@@ -32,9 +32,10 @@ RSpec.describe ArticlesController, type: :controller do
     end
 
     it "return detail article from cached" do
+      allow(CachingService.new).to receive(:get_data).and_return("{}".to_json)
       get :show, params: { id: id, url: url }
       expect(response).to be_successful
-      expect(JSON.parse(response.body)["source_from"]).to eq("cached")
+      expect(response.body).to match(/"source_from":"cached"/)
     end
   end
 end
