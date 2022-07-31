@@ -44,17 +44,17 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "brakeman", require: false
   gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem "rspec"
+  gem "mock_redis"
+  gem "rspec-rails"
+  gem "sqlite3"
 end
 
-group :development do
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+group :test do
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
+  gem "simplecov", require: false
+  gem "simplecov-console", require: false
 end
 
 group :production do
   gem "pg"
-end
-group :development, :test do
-  gem "sqlite3"
 end

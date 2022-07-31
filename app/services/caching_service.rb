@@ -16,10 +16,6 @@ class CachingService
                        ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
   end
 
-  def right_push(key, data)
-    redis.rpush(key, data.to_json)
-  end
-
   def set_data(key, data)
     redis.set(key, data, ex: CACHE_EXPIRED_TIME)
   end

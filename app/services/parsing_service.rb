@@ -10,6 +10,8 @@ class ParsingService
 
   def call
     doc = Nokogiri::HTML(data)
+    raise if doc.errors.size.positive?
+
     result = {}
     search_terms.each do |(k, v)|
       result[k] = doc.xpath(v)
