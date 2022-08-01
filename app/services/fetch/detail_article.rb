@@ -4,8 +4,8 @@ module Fetch
   class DetailArticle
     attr_reader :id, :url, :short_desc_only
 
-    def initialize(id: 32_245_146,
-                   url: "https://www.axios.com/2022/07/25/sunset-social-network-facebook-tiktok",
+    def initialize(id: 32_262_856,
+                   url: "https://www.deepmind.com/blog/alphafold-reveals-the-structure-of-the-protein-universe",
                    short_desc_only: false)
       @id = id
       @url = url
@@ -23,8 +23,8 @@ module Fetch
     private
 
     def collect(result)
-      doc = Nokogiri::HTML5(result.prepare_candidates[:elem])
-      { content: doc.xpath("//text()"), images: result.images, title: result.title }
+      doc = Nokogiri::HTML5(result.content)
+      { content: doc.xpath("//h1", "//h2", "//h3", "//h4", "//h5", "//h6", "//p"), images: result.images, title: result.title }
     end
 
     def short_desc_handler(detail_data)

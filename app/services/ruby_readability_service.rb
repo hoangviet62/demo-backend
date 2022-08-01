@@ -2,7 +2,7 @@
 
 class RubyReadabilityService
   class << self
-    TAGS = %w[body p div pre code img h1 h2 h3 h4 li ul tt em b a ol blockquote center br table td tr tbody font i dl dt dd
+    TAGS = %w[head body div p pre code img h1 h2 h3 h4 li ul tt em b a ol blockquote center br table td tr tbody font i dl dt dd
               span header figure main].freeze
     ATTRIBUTES = %w[href rowspan border color src bgcolor width size align face class title id].freeze
 
@@ -15,7 +15,8 @@ class RubyReadabilityService
         attributes: ATTRIBUTES,
         remove_empty_nodes: false,
         ignore_image_format: %w[gif],
-        encoding: false
+        encoding: false,
+        html_headers: true
       ), nil]
     rescue StandardError => e
       Rails.logger.error "Failed to fetch the content from #{url}"
