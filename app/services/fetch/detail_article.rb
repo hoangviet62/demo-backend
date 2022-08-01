@@ -24,7 +24,7 @@ module Fetch
 
     def collect(result)
       doc = Nokogiri::HTML5(result.prepare_candidates[:elem])
-      { content: doc.xpath("//text()"), images: result.images }
+      { content: doc.xpath("//text()"), images: result.images, title: result.title }
     end
 
     def short_desc_handler(detail_data)
