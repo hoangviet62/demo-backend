@@ -42,8 +42,6 @@ module DemoBackend
 
     config.after_initialize do
       Sidekiq::RetrySet.new.clear
-      puts "Clean cron jobs before execute"
-      Sidekiq::Cron::Job.destroy_all!
     end
   end
 end
