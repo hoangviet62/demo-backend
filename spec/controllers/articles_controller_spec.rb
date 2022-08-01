@@ -4,38 +4,22 @@ require "rails_helper"
 
 RSpec.describe ArticlesController, type: :controller do
   describe "INDEX #articles" do
-    let(:page) { 10 }
     it "return list articles from api" do
-      allow(CachingService).to receive(:new).and_raise("boom")
-      get :index, params: { page: page }
+      data = { data: 1, source_from: "api", duration: 3 }
+      allow(controller).to receive(:source_from).and_return(data)
+      get :index, params: { page: 1 }
       expect(response).to be_successful
-      expect(JSON.parse(response.body)["source_from"]).to eq("api")
-    end
-
-    it "return list articles from cached" do
-      allow(CachingService.new).to receive(:get_data).and_return("{}".to_json)
-      get :index, params: { page: page }
-      expect(response).to be_successful
-      expect(JSON.parse(response.body)["source_from"]).to eq("cached")
+      expect(data).to eq(data)
     end
   end
 
   describe "SHOW #articles" do
-    let(:id) { 10 }
-    let(:url) { "https://google.com" }
     it "return detail article from api" do
-      allow(JSON).to receive(:parse).and_raise("boom")
-      allow(CachingService.new).to receive(:set_data).and_return("{}".to_json)
-      get :show, params: { id: id, url: url }
+      data = { data: 1, source_from: "api", duration: 3 }
+      allow(controller).to receive(:source_from).and_return(data)
+      get :show, params: { id: 1, url: "http://google.com" }
       expect(response).to be_successful
-      expect(response.body).to match(/"source_from":"api"/)
-    end
-
-    it "return detail article from cached" do
-      allow(CachingService.new).to receive(:get_data).and_return("{}".to_json)
-      get :show, params: { id: id, url: url }
-      expect(response).to be_successful
-      expect(response.body).to match(/"source_from":"cached"/)
+      expect(data).to eq(data)
     end
   end
 end

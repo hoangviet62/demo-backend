@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-01T21:06:01+07:00">2022-08-01T21:06:01+07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-08-01T23:58:42+07:00">2022-08-01T23:58:42+07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  93.02%
+  91.12%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.07
+         1.79
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>20</b> files in total.
+    <b>21</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>215</b> relevant lines,
-    <span class="green"><b>200</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed. </span>
+    <b>214</b> relevant lines,
+    <span class="green"><b>195</b> lines covered</span> and
+    <span class="red"><b>19</b> lines missed. </span>
     (<span class="green">
-  93.02%
+  91.12%
 </span>
 )
   </div>
@@ -83,12 +83,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2efeb3e4f3b25766f7a8dfaecd8e1a13c89e0d48" class="src_link" title="app/controllers/articles_controller.rb">app/controllers/articles_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">96.30 %</td>
-            <td class="cell--number">46</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">26</td>
+            <td class="green strong cell--number t-file__coverage">92.86 %</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">13</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">1.56</td>
+            <td class="cell--number">0.93</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#12e4ae265a1ead1ac35576a3e44790dbbcddbd5e" class="src_link" title="app/helpers/fetch_data_helper.rb">app/helpers/fetch_data_helper.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">75.00 %</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0.75</td>
             
           </tr>
         
@@ -99,7 +110,7 @@
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">5.00</td>
+            <td class="cell--number">1.50</td>
             
           </tr>
         
@@ -127,12 +138,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#dad6fb30a0a0352a062a1850c3ce3df3ffef2732" class="src_link" title="app/services/caching_service.rb">app/services/caching_service.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">83.33 %</td>
+            <td class="red strong cell--number t-file__coverage">75.00 %</td>
             <td class="cell--number">34</td>
             <td class="cell--number">12</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2.08</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">1.17</td>
             
           </tr>
         
@@ -143,7 +154,7 @@
             <td class="cell--number">25</td>
             <td class="cell--number">24</td>
             <td class="cell--number">1</td>
-            <td class="cell--number">3.84</td>
+            <td class="cell--number">3.48</td>
             
           </tr>
         
@@ -154,7 +165,7 @@
             <td class="cell--number">40</td>
             <td class="cell--number">38</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">2.53</td>
+            <td class="cell--number">2.58</td>
             
           </tr>
         
@@ -176,7 +187,7 @@
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.80</td>
+            <td class="cell--number">1.50</td>
             
           </tr>
         
@@ -387,7 +398,7 @@
     <h3>app/controllers/articles_controller.rb</h3>
     <h4>
       <span class="green">
-  96.3%
+  92.86%
 </span>
 
       lines covered
@@ -396,8 +407,8 @@
     
 
     <div class="t-line-summary">
-      <b>27</b> relevant lines.
-      <span class="green"><b>26</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
 
@@ -459,12 +470,23 @@
 
             
 
+            <code class="ruby">  include FetchDataHelper</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  CACHED_KEY = &quot;overview&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -475,7 +497,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
@@ -486,8 +508,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
             
@@ -497,8 +519,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
             
@@ -508,35 +530,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    source_from = &quot;cached&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="11">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    start_time = Time.current.to_i</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    render json: source_from(cache_key: cache_key, resource: ::Fetch::ListArticles.new(page: current_page))</code>
           </li>
         </div>
       
@@ -547,67 +558,12 @@
 
             
 
-            <code class="ruby">    data = begin</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="14">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      JSON.parse CachingService.new.get_data(cache_key)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">    rescue StandardError</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      source_from = &quot;api&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      ::Fetch::ListArticles.new(page: current_page).call</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -618,35 +574,90 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="20">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    end_time = Time.current.to_i</code>
+            <code class="ruby">  def show</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="21">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    total = end_time - start_time</code>
+            <code class="ruby">    id = params[:id] || &quot;&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="22">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    render json: { data: data, source_from: source_from, duration: humanize(total.zero? ? 1 : total) }</code>
+            <code class="ruby">    url = params[:url] || &quot;&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    render json: source_from(cache_key: id, resource: ::Fetch::DetailArticle.new(id: id, url: url))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def cached_keys</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">    CachingService.new.all_keys(&quot;*#{CACHED_KEY}*&quot;)</code>
           </li>
         </div>
       
@@ -668,57 +679,66 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="12e4ae265a1ead1ac35576a3e44790dbbcddbd5e">
+  <div class="header">
+    <h3>app/helpers/fetch_data_helper.rb</h3>
+    <h4>
+      <span class="red">
+  75.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>12</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="1">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">module FetchDataHelper</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="26">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    id = params[:id] || &quot;&quot;</code>
+            <code class="ruby">  def source_from(cache_key:, resource:)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="27">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    url = params[:url] || &quot;&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="28">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    source_from = &quot;cached&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="29">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
             
@@ -728,96 +748,19 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">    data = begin</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="32">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      JSON.parse CachingService.new.get_data(id)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby">    rescue StandardError</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      source_from = &quot;api&quot;</code>
+            <code class="ruby">    data = JSON.parse(CachingService.new.get_data(cache_key))</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="5">
             
-
-            
-
-            <code class="ruby">      ::Fetch::DetailArticle.new(id: id, url: url).call</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="38">
-            <span class="hits">2</span>
             
 
             
@@ -827,8 +770,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="39">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="6">
+            
             
 
             
@@ -838,62 +781,84 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">    render json: { data: data, source_from: source_from, duration: humanize(total.zero? ? 1 : total) }</code>
+            <code class="ruby">    { data: data, source_from: &quot;Cached Service with key = #{cache_key}&quot;, duration: humanize(total.zero? ? 1 : total) }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  rescue StandardError</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def cached_keys</code>
+            <code class="ruby">    start_time = Time.current.to_i</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="44">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    CachingService.new.all_keys(&quot;*#{CACHED_KEY}*&quot;)</code>
+            
+
+            <code class="ruby">    data = resource.call</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    end_time = Time.current.to_i</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    total = end_time - start_time</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    { data: data, source_from: &quot;API Service&quot;, duration: humanize(total.zero? ? 1 : total) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -904,7 +869,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -990,8 +955,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="5">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
             
@@ -1001,8 +966,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="16" data-linenumber="6">
-            <span class="hits">16</span>
+          <li class="covered" data-hits="4" data-linenumber="6">
+            <span class="hits">4</span>
             
 
             
@@ -1023,8 +988,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="8">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
             
@@ -1045,8 +1010,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="10">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
             
@@ -1445,8 +1410,8 @@
   <div class="header">
     <h3>app/services/caching_service.rb</h3>
     <h4>
-      <span class="yellow">
-  83.33%
+      <span class="red">
+  75.0%
 </span>
 
       lines covered
@@ -1456,8 +1421,8 @@
 
     <div class="t-line-summary">
       <b>12</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
 
     
@@ -1534,8 +1499,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="7">
-            <span class="hits">13</span>
+          <li class="covered" data-hits="6" data-linenumber="7">
+            <span class="hits">6</span>
             
 
             
@@ -1677,8 +1642,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="20">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
             
@@ -1721,8 +1686,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="24">
-            <span class="hits">3</span>
+          <li class="missed" data-hits="0" data-linenumber="24">
+            
             
 
             
@@ -2038,8 +2003,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="16">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="16">
+            <span class="hits">6</span>
             
 
             
@@ -2049,8 +2014,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="17">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="17">
+            <span class="hits">6</span>
             
 
             
@@ -2071,8 +2036,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="19">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="19">
+            <span class="hits">6</span>
             
 
             
@@ -2082,8 +2047,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="20">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="20">
+            <span class="hits">6</span>
             
 
             
@@ -2148,8 +2113,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="26">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="26">
+            <span class="hits">6</span>
             
 
             
@@ -2159,8 +2124,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="27">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="6" data-linenumber="27">
+            <span class="hits">6</span>
             
 
             
@@ -2280,8 +2245,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="38">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
             
 
             
@@ -2291,8 +2256,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="39">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
             
@@ -2302,8 +2267,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
             
 
             
@@ -2454,8 +2419,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="6">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="4" data-linenumber="6">
+            <span class="hits">4</span>
             
 
             
@@ -3616,8 +3581,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="10">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="3" data-linenumber="10">
+            <span class="hits">3</span>
             
 
             
@@ -3627,8 +3592,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="11">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="3" data-linenumber="11">
+            <span class="hits">3</span>
             
 
             
@@ -3638,8 +3603,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="12">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
             
 
             
@@ -5339,7 +5304,7 @@
 
             
 
-            <code class="ruby">CACHE_EXPIRED_TIME = 300.seconds</code>
+            <code class="ruby">CACHE_EXPIRED_TIME = ENV.fetch(&quot;CACHE_EXPIRED_TIME&quot;, 600).to_i.seconds</code>
           </li>
         </div>
       
