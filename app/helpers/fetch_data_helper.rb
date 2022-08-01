@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FetchDataHelper
   def source_from(cache_key:, resource:)
     start_time = Time.current.to_i
