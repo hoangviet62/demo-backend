@@ -1,4 +1,4 @@
 scheduler_job:
-  name: "SchedulerWorker - every 5 seconds"
+  name: "SchedulerWorker - every 5 minutes"
   cron: "*/1 * * * *"
   class: 'SchedulerWorker'

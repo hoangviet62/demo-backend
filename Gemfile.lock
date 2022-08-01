@@ -83,6 +83,10 @@ GEM
     diff-lcs (1.5.0)
     digest (3.1.0)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     down (5.3.1)
       addressable (~> 2.8)
     erubi (1.10.0)
@@ -260,6 +264,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   debug
+  dotenv-rails
   down
   fastimage
   mock_redis

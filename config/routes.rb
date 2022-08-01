@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :articles, only: %i[index show]
+  resources :articles, only: %i[index show] do
+    collection do
+      get :cached_keys
+    end
+  end
   mount Sidekiq::Web => "/sidekiq"
 end

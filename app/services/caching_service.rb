@@ -28,7 +28,7 @@ class CachingService
     redis.del(key)
   end
 
-  def all_keys
-    redis.keys
+  def all_keys(regex = "*")
+    redis.keys regex
   end
 end

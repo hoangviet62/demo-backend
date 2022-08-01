@@ -2,9 +2,11 @@
 
 class ArticlesController < ApplicationController
   include TimeHelper
+  CACHED_KEY = "overview"
+
   def index
     current_page = params[:page] || 1
-    cache_key = "overview_#{current_page}"
+    cache_key = "#{CACHED_KEY}_#{current_page}"
     source_from = "cached"
     start_time = Time.current.to_i
 
@@ -16,7 +18,8 @@ class ArticlesController < ApplicationController
     end
 
     end_time = Time.current.to_i
-    render json: { data: data, source_from: source_from, duration: humanize(end_time - start_time) }
+    total = end_time - start_time
+    render json: { data: data, source_from: source_from, duration: humanize(total.zero? ? 1 : total) }
   end
 
   def show
@@ -33,6 +36,11 @@ class ArticlesController < ApplicationController
     end
 
     end_time = Time.current.to_i
-    render json: { data: data, source_from: source_from, duration: humanize(end_time - start_time) }
+    total = end_time - start_time
+    render json: { data: data, source_from: source_from, duration: humanize(total.zero? ? 1 : total) }
+  end
+
+  def cached_keys
+    CachingService.new.all_keys("*#{CACHED_KEY}*")
   end
 end

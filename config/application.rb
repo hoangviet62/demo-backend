@@ -8,6 +8,8 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load if %w[development test].include? ENV["RAILS_ENV"]
+
 module DemoBackend
   class Application < Rails::Application
     initializer(:remove_action_mailbox_and_activestorage_routes, after: :add_routing_paths) do |app|
@@ -37,5 +39,11 @@ module DemoBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.after_initialize do
+      Sidekiq::RetrySet.new.clear
+      puts "Clean cron jobs before execute"
+      Sidekiq::Cron::Job.destroy_all!
+    end
   end
 end
