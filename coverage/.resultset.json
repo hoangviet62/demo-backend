@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/viet/workspace/my-projects/demo-backend/config/environment.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -12,7 +12,7 @@
           1
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/application.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/application.rb": {
         "lines": [
           null,
           null,
@@ -57,7 +57,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/boot.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -67,7 +67,7 @@
           1
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/environments/test.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -133,7 +133,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/initializers/constants.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/initializers/constants.rb": {
         "lines": [
           null,
           null,
@@ -141,7 +141,7 @@
           1
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/initializers/cors.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -162,7 +162,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/initializers/filter_parameter_logging.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -176,7 +176,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/initializers/inflections.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -197,7 +197,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/initializers/sidekiq.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/initializers/sidekiq.rb": {
         "lines": [
           null,
           null,
@@ -238,7 +238,7 @@
           1
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/config/routes.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/config/routes.rb": {
         "lines": [
           null,
           null,
@@ -256,12 +256,31 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/controllers/articles_controller.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/helpers/time_helper.rb": {
         "lines": [
           null,
           null,
           1,
           1,
+          4,
+          16,
+          null,
+          4,
+          null,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/controllers/articles_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          2,
           2,
           2,
           2,
@@ -274,12 +293,14 @@
           null,
           null,
           2,
+          2,
           null,
           null,
           1,
           2,
           2,
           2,
+          2,
           null,
           null,
           2,
@@ -288,12 +309,13 @@
           1,
           null,
           null,
+          2,
           2,
           null,
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/controllers/application_controller.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -301,7 +323,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/services/caching_service.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/services/caching_service.rb": {
         "lines": [
           null,
           null,
@@ -339,7 +361,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/services/fetch/detail_article.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/services/fetch/detail_article.rb": {
         "lines": [
           null,
           null,
@@ -388,7 +410,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/services/fetch/list_articles.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/services/fetch/list_articles.rb": {
         "lines": [
           null,
           null,
@@ -464,7 +486,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/services/parsing_service.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/services/parsing_service.rb": {
         "lines": [
           null,
           null,
@@ -492,7 +514,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/services/ruby_readability_service.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/services/ruby_readability_service.rb": {
         "lines": [
           null,
           null,
@@ -521,7 +543,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/jobs/cache_page_worker.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/jobs/cache_page_worker.rb": {
         "lines": [
           null,
           null,
@@ -535,7 +557,7 @@
           null
         ]
       },
-      "/home/viet/workspace/my-projects/demo-backend/app/jobs/fetch_short_desc_worker.rb": {
+      "/Users/viet.nguyen/workspace/demo/demo-backend/app/jobs/fetch_short_desc_worker.rb": {
         "lines": [
           null,
           null,
@@ -556,6 +578,6 @@
         ]
       }
     },
-    "timestamp": 1659286784
+    "timestamp": 1659324134
   }
 }
